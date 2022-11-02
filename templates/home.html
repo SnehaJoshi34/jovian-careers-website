@@ -9,11 +9,11 @@
         font-weight:bold;
         color: rgb(255,200,0);
        text-align :center;
-      }
+      } 
       #banner {
         width: 100%;
         height: 360px;
-        object-fit:cover;
+    
       }
       h2{
         font family: Roboto;
@@ -29,7 +29,7 @@
       }
       #container{
         margin width=720px;
-        margin:0 auto 0 auto;
+        margin: 0 auto;
       }
       
       }
@@ -37,17 +37,24 @@
   </head>
   <body>
     <div id="container">
-     <h1>Jovian Careers</h1>
-    <img id="banner" src="https://jovian-careers-website.snehajoshi3.repl.co/static/career.jpg.jpg" 
-      height="320">
+    <div>
+      <h1>Jovian Careers</h1>
+    <img id="banner" src="https://jovian-careers-website.snehajoshi3.repl.co/static/career.jpg.jpg" >
       <h2>About Jovian</h2>
     <p class="bodytext">The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets, and again during the 90s as desktop publishers bundled the text with their software. Today it's seen all around the web; on templates, websites, and stock designs. Use our generator to get your own, or read on for the authoritative history of lorem ipsum.</p>
     <h2>Open positions</h2>
-    <p class="bodytext">TODO- Show the jobs here</p>
-    <div style="text-align:center;">
+      <div> 
+        
+        {% for job in jobs %}
+         {% include 'jobitem.html' %}
+        {% endfor %}
+      </div>
+    </div>
+    <p>TODO- Show the jobs here</p>
+      <div style="text-align:center;">
       <p>Copyright 2022 , Jovian</p>
     <button>Contact Us</button>
-    </div>
+      </div>
     </div>
   </body>
 </html>
